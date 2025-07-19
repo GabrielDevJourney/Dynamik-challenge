@@ -42,7 +42,7 @@ The Dynamik Challenge is a fullstack application designed to manage a registry o
 
 #### 1. Clone the Repository
 ```bash
-git clone [git@github.com:GabrielDevJourney/Dynamik-challenge.git]
+git clone git@github.com:GabrielDevJourney/Dynamik-challenge.git
 cd Dynamik-challenge
 ```
 
