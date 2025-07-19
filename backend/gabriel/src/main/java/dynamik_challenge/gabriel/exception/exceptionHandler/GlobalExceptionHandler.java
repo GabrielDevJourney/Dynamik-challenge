@@ -1,6 +1,7 @@
-package dynamik_challenge.gabriel.exception;
+package dynamik_challenge.gabriel.exception.exceptionHandler;
 
-import jakarta.validation.ConstraintViolationException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
@@ -12,6 +13,8 @@ import java.util.Map;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
+
+	private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
 	// 400
 	@ExceptionHandler(HttpMessageNotReadableException.class)
@@ -44,6 +47,7 @@ public class GlobalExceptionHandler {
 	// 500
 	@ExceptionHandler(Exception.class)
 	public ResponseEntity<Object> handleOtherExceptions(Exception ex) {
+		logger.error("Internal server error occurred", ex);
 		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(
 				Map.of("error", "Internal server error")
 		);

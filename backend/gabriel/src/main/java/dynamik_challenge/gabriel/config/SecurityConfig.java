@@ -1,4 +1,4 @@
-package dynamik_challenge.gabriel;
+package dynamik_challenge.gabriel.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

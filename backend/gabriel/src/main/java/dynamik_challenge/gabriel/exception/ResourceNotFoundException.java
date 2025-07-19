@@ -1,7 +1,9 @@
 package dynamik_challenge.gabriel.exception;
 
-public class ResourceNotFoundException extends RuntimeException {
-  public ResourceNotFoundException(String message) {
-    super(message);
-  }
+import dynamik_challenge.gabriel.exception.exceptionHandler.CustomValidationException;
+
+public class ResourceNotFoundException extends CustomValidationException {
+	public ResourceNotFoundException(String message) {
+		super(message);
+	}
 }
