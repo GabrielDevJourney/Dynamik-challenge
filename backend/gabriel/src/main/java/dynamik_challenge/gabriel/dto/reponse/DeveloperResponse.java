@@ -4,22 +4,22 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class DeveloperResponse {
-	private final String uuid;
+	private final String id;
 	private final String nickname;
 	private final String name;
 	private final LocalDate birth_date;
-	private final List<String> stacks;
+	private final List<String> stack;
 
-	public DeveloperResponse(String uuid, String nickname, String name, LocalDate birth_date, List<String> stacks) {
-		this.uuid = uuid;
+	public DeveloperResponse(String id, String nickname, String name, LocalDate birth_date, List<String> stack) {
+		this.id = id;
 		this.nickname = nickname;
 		this.name = name;
 		this.birth_date = birth_date;
-		this.stacks = stacks;
+		this.stack = stack;
 	}
 
-	public String getUuid() {
-		return uuid;
+	public String getId() {
+		return id;
 	}
 
 	public String getNickname() {
@@ -34,7 +34,7 @@ public class DeveloperResponse {
 		return birth_date;
 	}
 
-	public List<String> getStacks() {
-		return stacks;
+	public List<String> getStack() {
+		return stack;
 	}
 }
