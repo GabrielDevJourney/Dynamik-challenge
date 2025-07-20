@@ -49,6 +49,7 @@ cd Dynamik-challenge
 #### 2. Start the Backend
 ```bash
 cd backend/gabriel
+add .env use .env.example as guide
 docker-compose up --build
 ```
 The API will be available at `http://localhost:8080`
